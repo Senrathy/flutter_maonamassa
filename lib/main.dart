@@ -4,6 +4,8 @@ import 'package:flutter_maonamassa/navegacao/page1.dart';
 import 'package:flutter_maonamassa/navegacao/page2.dart';
 import 'package:flutter_maonamassa/navegacao/page3.dart';
 import 'package:flutter_maonamassa/navegacao/page4.dart';
+import 'package:flutter_maonamassa/navegacao_params/detalhe.dart';
+import 'package:flutter_maonamassa/navegacao_params/lista.dart';
 // import 'package:flutter_maonamassa/home/home_page.dart';
 // import 'package:flutter_maonamassa/images/images_page.dart';
 
@@ -21,12 +23,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // home: HomePage(),
       // home: navegacao.HomePage(),
+      initialRoute: '/navegacao_params',
       routes: {
-        '/' : (_) => navegacao.HomePage(),
-        '/page1' : (_) => Page1(),
-        '/page2' : (_) => Page2(),
-        '/page3' : (_) => Page3(),
-        Page4.routeName : (_) => Page4(),
+        '/': (_) => navegacao.HomePage(),
+        '/page1': (_) => Page1(),
+        '/page2': (_) => Page2(),
+        '/page3': (_) => Page3(),
+        Page4.routeName: (_) => Page4(),
+        '/navegacao_params': (_) => Lista(),
+        '/detalhe': (_) => Detalhe(),
       },
     );
   }
